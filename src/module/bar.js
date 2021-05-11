@@ -7,7 +7,18 @@ class Bar extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = 
+        /*
+        let listItems = props.list.map(
+            (item) =>
+            {
+                return {
+
+                }
+            }
+        );
+        */
+
+        this.state =
         {
             list: props.list
         };
@@ -18,7 +29,7 @@ class Bar extends React.Component {
 
     handler = (e) =>
     {
-        console.log(e);
+        console.log(e.target.attributes.thisitem.value);
     }
 
 
@@ -27,11 +38,11 @@ class Bar extends React.Component {
         return (
             <div>
                 <h2>Bar</h2>
-                <p>{this.state.list}</p>
+
                 <ul>
                     {this.state.list.map(
                         (item) =>
-                        <li onClick={this.handler} className={style.noBullet}>
+                        <li key={item} thisitem={item} onClick={this.handler} className={style.noBullet}>
                             <img src={logo} className={style.bullet} alt="bullet"/>
                             {item}
                         </li>
@@ -47,7 +58,9 @@ class Bar extends React.Component {
 export default Bar;
 
 
-
+/*
+<p>{this.state.list}</p>
+*/
 
 
 /*
