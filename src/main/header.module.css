@@ -1,3 +1,26 @@
-img.header { height:4em; }
 
-header.header { border-bottom: .1em dotted grey; }
+
+header.header {
+	border-bottom: .1em dotted grey;
+
+	display:flex;
+	flex-direction: row;
+	align-items: stretch;
+	align-content: space-between;
+	justify-content: space-between;
+}
+
+header.header > div {
+	/* outline: 1px dotted pink; */
+	vertical-align:bottom;
+	width:33%;
+}
+
+header.header .logo {
+	text-align:left;
+}
+
+
+img.header {
+	height:4em;
+}

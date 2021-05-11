@@ -14,9 +14,15 @@ class Header extends React.Component {
 	render() {
 		return (
 			<header className={style.header}>
-				<img className={style.header} src={logo} alt="logo"/>
-				<h1>Test React App</h1>
-				<div>Status</div>
+				<div className={logo}>
+					<img className={style.header} src={logo} alt="logo"/>
+				</div>
+				<div>
+					<h1>Test React App</h1>
+				</div>
+				<div>
+					<p>Very Very Important Information</p>
+				</div>
 			</header>
 		);
 	}
