@@ -1,0 +1,9 @@
+img.bullet {
+    height:2em;
+    width: 2em;
+    vertical-align:middle;
+}
+
+li.noBullet {
+    list-style: none;
+}
